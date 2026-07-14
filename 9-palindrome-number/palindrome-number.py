@@ -3,5 +3,12 @@ class Solution:
         if x < 0:
             return False
         
-        s = str(x)
-        return s == s[::-1]
+        original = x
+        rev = 0
+
+        while x > 0:
+            last = x % 10
+            rev = (rev * 10) + last
+            x = x // 10
+        
+        return original == rev
