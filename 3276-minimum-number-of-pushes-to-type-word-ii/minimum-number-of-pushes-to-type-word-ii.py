@@ -4,7 +4,7 @@ class Solution:
         sr = sorted(counts.values(), reverse=True)
         result = 0
         
-        for i in range(len(sr)):
-            x = ((i // 8) + 1) * sr[i]
+        for i, sr in enumerate(sr):
+            x = ((i // 8) + 1) * sr
             result += x
         return result
